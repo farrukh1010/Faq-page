@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #bedfe8;
+}
+.accordion{
+    max-width: 600px;
+}
+.accordion h2{
+color: hotpink;
+position: relative;
+text-align: center;
+}
+
+.accordion .contentBx{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion .contentBx .label{
+    position: relative;
+    padding: 10px;
+    background: #2694af;
+    color: #fff0ff;
+    cursor: pointer;
+
+
+}
+.accordion .contentBx .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.accordion .contentBx .content{
+    content: "-";
+}
+.accordion .contentBx .content{
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    overflow-y: auto;
+}
+.accordion .contentBx.active .content{
+      height: 80px;
+    padding: 10px;
+}
